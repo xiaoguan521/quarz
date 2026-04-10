@@ -639,3 +639,122 @@ iframe.pdf {
   transition: width 0.2s ease;
   z-index: 9999;
 }
+
+body[data-slug="index"] {
+  .page-header {
+    display: none;
+  }
+
+  .center > article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .home-hero {
+    padding: 1.4rem 1.5rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at top right, color-mix(in srgb, var(--tertiary) 18%, transparent), transparent 38%),
+      linear-gradient(135deg, color-mix(in srgb, var(--highlight) 65%, transparent), transparent 70%);
+
+    .home-eyebrow {
+      margin: 0 0 0.55rem 0;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--secondary);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 0.8rem 0;
+      font-size: 2.1rem;
+    }
+
+    .home-subtitle {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.9;
+      max-width: 48rem;
+    }
+  }
+
+  .home-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .home-entry-card.internal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.15rem 1.2rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--light) 94%, var(--highlight));
+    line-height: 1.7;
+
+    strong {
+      font-size: 1.06rem;
+      color: var(--dark);
+    }
+
+    span:last-child {
+      color: var(--darkgray);
+      font-weight: 400;
+    }
+  }
+
+  .home-entry-tag {
+    width: fit-content;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--secondary) 14%, transparent);
+    color: var(--secondary);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .home-dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+
+    @media all and ($mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .home-panel {
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--light) 96%, var(--highlight));
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 0.55rem;
+    }
+  }
+
+  .sidebar.right .recent-notes {
+    padding: 1rem 1rem 0.4rem 1rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--light) 96%, var(--highlight));
+  }
+}
