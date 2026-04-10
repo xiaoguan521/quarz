@@ -33,10 +33,10 @@ export default {
       title: "阅读模式",
     },
     explorer: {
-      title: "探索",
+      title: "目录导航",
     },
     footer: {
-      createdWith: "Created with",
+      createdWith: "基于",
     },
     graph: {
       title: "关系图谱",
@@ -51,10 +51,10 @@ export default {
     },
     search: {
       title: "搜索",
-      searchBarPlaceholder: "搜索些什么",
+      searchBarPlaceholder: "搜索站内内容",
     },
     tableOfContents: {
-      title: "目录",
+      title: "页面导航",
     },
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes}分钟阅读`,
